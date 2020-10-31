@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+    <style type="text/css">
+        ::-webkit-scrollbar{
+            display: none;}
+        .imgBox{
+            border-top: 2px solid cadetblue;
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        .imgBox img{
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding-top: 30px;
+        }
+        .img1{
+            display: block;
+        }
+        .img2{
+            display: none;
+        }
+        .img3{
+            display: none;
+        }
+        .box{
+            width: 570px;
+            height: 200px;
+        }
+        .pic{
+            width: 300px;
+            float: left;
+        }
+        .word{
+            width: 270px;
+            float: right;
+        }
+        .word p{
+            size: B5;
+            align:"left";
+            color: dimgray;
+        }
+    </style>
+</head>
+
+<body style="text-align: center">
+<div style="background-color: antiquewhite;border-radius:10px;">
+    <div id="imgBox" class="imgBox">
+        <h3 align="center" style="color: dimgrey">今日推荐</h3>
+        <img class="img-slide img1" src="./img/taiyan2.jpg" alt="1">
+        <img class="img-slide img2" src="./img/blackpink.jpg" alt="2">
+        <img class="img-slide img3" src="./img/denglun2.jpg" alt="3">
+    </div>
+    <div style="height: 200px"></div>
+    <div class="box">
+        <div class="pic"><img src="img/taiyan1.jpg" style="height: 200px;width: 150px"/></div>
+        <div class="word">
+            <p style="font-weight: bolder">金泰妍 Taeyeon</p>
+            <p>1989年3月9日在韩国全罗北道全州市出生，韩国女歌手、主持人，女子演唱团体少女时代队长、主唱。2004年，金泰妍在第八届SM青少年选拔大赛歌王中夺得第一名，
+                进入韩国SM娱乐有限公司开始练习生生涯...</p>
+        </div>
+    </div>
+    <div style="height: 100px"></div>
+    <div class="box">
+        <div class="pic"><img src="img/denglun2.jpg" style="height: 150px;width: 200px"/></div>
+        <div class="word">
+            <p style="font-weight: bolder">邓伦 Allen</p>
+            <p>邓伦，1992年10月21日出生于河北省石家庄市，中国内地影视男演员，毕业于上海戏剧学院表演系。2012年，出演个人首部电视剧《花非花雾非雾》，从而正式进入演艺圈。
+                2013年，出演民国情感剧《新京华烟云》...</p>
+        </div>
+    </div>
+    <div style="height: 100px"></div>
+    <div class="box">
+        <div class="pic"><img src="img/yangzi.jpg" style="height: 200px;width: 150px"/></div>
+        <div class="word">
+            <p style="font-weight: bolder">杨紫</p>
+            <p>杨紫，1992年11月6日出生于北京市，毕业于北京电影学院2010级表演系本科班，中国内地影视女演员、流行乐歌手。2002年，因出演古装历史情感剧《孝庄秘史》开始崭露头角。
+                2004年，凭借青春校园喜剧片《女生日记》...</p>
+        </div>
+    </div>
+    <div style="height: 100px"></div>
+</div>
+</body>
+<script type="text/javascript">
+    // 轮播图
+    var index=0;
+    function ChangeImg() {
+        index++;
+        var a=document.getElementsByClassName("img-slide");
+        if(index>=a.length) index=0;
+        for(var i=0;i<a.length;i++){
+            a[i].style.display='none';
+        }
+        a[index].style.display='block';
+    }
+    setInterval(ChangeImg,3000);
+</script>
+</html>
