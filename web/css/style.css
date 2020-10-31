@@ -1,0 +1,46 @@
+.div2{
+    height: 30px;
+    width: 750px;
+}
+
+box {
+    height: 40px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+line {
+    height: 2px;
+    flex-grow: 1;
+    background-color: dimgrey;
+}
+
+text {
+    margin: 0 5px;
+}
+
+.pic{
+    width: 700px;
+    margin: 20px auto;
+    /*border: solid 1px red;*/
+    overflow: hidden;
+}
+.pic div{
+    width: 200px;
+    border: solid 1px grey;
+    float:left;
+    margin-left: 25px;
+}
+.pic div img{
+    display:block;
+    width: 100%;
+}
+
+.font1{
+    color: gainsboro;
+    size: A3;
+    margin-left: 50px;
+    text-align: left;
+}
