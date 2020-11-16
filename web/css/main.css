@@ -34,5 +34,6 @@
 .word p{
     size: B5;
     align:"left";
+    text-align: left;
     color: dimgray;
 }

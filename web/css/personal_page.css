@@ -5,6 +5,9 @@ table{
 tr{
     height: 50px;
 }
+td{
+    border-radius: 5px;
+}
 .color1{
     background-color: floralwhite;
 }

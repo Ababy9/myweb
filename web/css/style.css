@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-=======
-.div2{
-    height: 30px;
-    width: 750px;
-}
-
->>>>>>> f8040c435a92f9230c6a86afcab51bb43b1da543
-box {
-    height: 40px;
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-<<<<<<< HEAD
-=======
-line {
-    height: 2px;
-    flex-grow: 1;
-    background-color: dimgrey;
-}
-
-text {
-    margin: 0 5px;
-}
-
->>>>>>> f8040c435a92f9230c6a86afcab51bb43b1da543
 .pic{
     width: 700px;
     margin: 20px auto;
