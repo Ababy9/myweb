@@ -11,19 +11,41 @@
 </head>
 
 <body style="text-align: center">
-<div style="background-color: antiquewhite;border-radius:10px;height: 650px">
+<div class="bottom">
     <div class="form1">
         <h3 style="text-align: center">在此留下您宝贵的意见</h3>
-        <form>
-            <span>账号</span><br/>
-            <input type="text" name="account"><br/>
-            <span>邮箱</span><br/>
-            <input type="text" name="email"><br/>
-            <span>您的意见</span><br/>
-            <textarea name="idea"></textarea><br/>
-            <input type="submit" value="提交" style="width: 100px;height: 30px">
+        <form action="feedback.html" onsubmit="return validate_form(this);" method="post">
+            <p><span>账号 </span><br/><input type="text" name="account" required ></p>
+            <p><span>邮箱 </span><br/><input type="text" name="email" required ></p>
+            <p><span>建议 </span><br/><textarea name="idea" required ></textarea></p>
+<!--            placeholder="请写下您宝贵的建议"-->
+            <p><input type="submit" value="提 交" style="width: 165px;height: 30px" class="btn"></p>
         </form>
     </div>
 </div>
 </body>
+
+<script type="text/javascript">
+    function validate_email(field,alerttxt)
+    {
+        with (field)
+        {
+            apos=value.indexOf("@")
+            dotpos=value.lastIndexOf(".")
+            if (apos<1||dotpos-apos<2)
+            {alert(alerttxt);return false}
+            else {return true}
+        }
+    }
+
+    function validate_form(thisform)
+    {
+        with (thisform)
+        {
+            if (validate_email(email,"邮箱格式错误！")==false)
+            {email.focus();return false}
+        }
+    }
+</script>
+
 </html>
