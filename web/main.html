@@ -4,24 +4,37 @@
     <meta charset="UTF-8">
     <title>main</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/main.js"></script>
     <style type="text/css">
         ::-webkit-scrollbar{
             display: none;}
     </style>
+    <style>
+        span { background: #66afe9; }
+    </style>
+    <script>
+
+        // setInterval(search,1000);
+    </script>
 </head>
 
 <body style="text-align: center">
-<div style="background-color: antiquewhite;border-radius:10px;">
+<div id="box" style="background-color: antiquewhite;border-radius:10px;">
     <div id="imgBox" class="imgBox">
         <h3 align="center" style="color: dimgrey">今日推荐</h3>
         <img class="img-slide img1" src="./img/taiyan_lunbo.jpg" alt="1">
         <img class="img-slide img2" src="./img/blackpink_lunbo.jpg" alt="2">
         <img class="img-slide img3" src="./img/denglun_lunbo.jpg" alt="3">
     </div>
-    <div style="height: 200px"></div>
+    <div style="height: 150px"></div>
+    <div class="search">
+        <input type="text" style="height: 20px" placeholder="输入您想搜索的名字"/>
+        <input class="btn" type="button" value="查找" style="width: 45px;height: 25px"/>
+    </div>
+    <div style="height: 50px"></div>
     <div class="box">
         <div class="pic">
-            <a href="details.html"><img src="img/taiyan_cover.jpg" style="height: 200px;width: 150px"/></a>
+            <a href="taiyan_details.html"><img src="img/taiyan_cover.jpg" style="height: 200px;width: 150px"/></a>
         </div>
         <div class="word">
             <p style="font-weight: bolder">金泰妍 Taeyeon</p>
@@ -104,18 +117,32 @@
     <div style="height: 100px"></div>
 </div>
 </body>
-<script type="text/javascript">
-    // 轮播图
-    var index=0;
-    function ChangeImg() {
-        index++;
-        var a=document.getElementsByClassName("img-slide");
-        if(index>=a.length) index=0;
-        for(var i=0;i<a.length;i++){
-            a[i].style.display='none';
-        }
-        a[index].style.display='block';
-    }
-    setInterval(ChangeImg,2000);
-</script>
+
+<!--<script type="text/javascript">-->
+<!--    // 轮播图-->
+<!--    var index=0;-->
+<!--    function ChangeImg() {-->
+<!--        index++;-->
+<!--        var a=document.getElementsByClassName("img-slide");-->
+<!--        if(index>=a.length) index=0;-->
+<!--        for(var i=0;i<a.length;i++){-->
+<!--            a[i].style.display='none';-->
+<!--        }-->
+<!--        a[index].style.display='block';-->
+<!--    }-->
+<!--    setInterval(ChangeImg,2000);-->
+
+<!--    //search-->
+<!--    window.onload=function search() {-->
+<!--        var inp = document.getElementsByTagName("input");-->
+<!--        var oP = document.getElementById("box");-->
+
+<!--        inp[1].onclick = function () {-->
+<!--            var str = inp[0].value;-->
+<!--            if (!str) return; //若内容不存在即刷新页面-->
+<!--            oP.innerHTML = oP.innerHTML.split(str).join('<span>' + str + '</span>');-->
+<!--        }-->
+<!--    };-->
+<!--</script>-->
+
 </html>

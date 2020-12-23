@@ -2,53 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>personal page</title>
+    <title>personal page modify</title>
     <link rel="stylesheet" type="text/css" href="css/personal_page.css">
+    <script type="text/javascript" src="js/personal_page.js"></script>
     <style type="text/css">
         ::-webkit-scrollbar{
             display: none;}
     </style>
 </head>
 <body>
-<div style="background-color: antiquewhite;border-radius:10px;">
+<div style="background-color: antiquewhite;border-radius:10px;" class="bottom">
     <div style="height: 50px"></div>
     <img src="img/taiyan-touxiang.png" style="height: 200px;width: 200px;border-radius: 100%;margin-left: 320px">
     <p style="text-align: center">头像</p>
-    <table>
-        <tr class="color1">
-            <td class="t1d">账号</td>
-            <td class="t2d">abc123</td>
-        </tr>
-        <tr class="color2">
-            <td class="t1d">昵称</td>
-            <td class="t2d">Abby</td>
-        </tr>
-        <tr class="color1">
-            <td class="t1d">所在地</td>
-            <td class="t2d">浙江省杭州市</td>
-        </tr>
-        <tr class="color2">
-            <td class="t1d">性别</td>
-            <td class="t2d">女</td>
-        </tr>
-        <tr class="color1">
-            <td class="t1d">生日</td>
-            <td class="t2d">2000-10-10</td>
-        </tr>
-        <tr class="color2">
-            <td class="t1d">血型</td>
-            <td class="t2d">O型</td>
-        </tr>
-        <tr class="color1">
-            <td class="t1d">注册时间</td>
-            <td class="t2d">2020-10-01</td>
-        </tr>
-        <tr class="color2">
-            <td class="t1d">简介</td>
-            <td class="t2d" style="color: dimgray;font-weight: lighter">介绍下自己，让更多人认识你哦！</td>
-        </tr>
-    </table>
+    <form id="introForm" action="personal_page.html" method="post">
+        <table>
+            <tr class="color1">
+                <td class="t1d">账号</td>
+                <td class="t2d">abc123</td>
+            </tr>
+            <tr class="color2">
+                <td class="t1d">昵称</td>
+                <td class="t2d"><input type="text"  id="name" required></td>
+            </tr>
+            <tr class="color1">
+                <td class="t1d">所在地</td>
+                <td class="t2d"><input type="text"  id="place" ></td>
+            </tr>
+            <tr class="color2">
+                <td class="t1d">性别</td>
+                <td class="t2d">女</td>
+            </tr>
+            <tr class="color1">
+                <td class="t1d">生日</td>
+                <td class="t2d"><input type="text"  id="birthday" ></td>
+            </tr>
+            <tr class="color2">
+                <td class="t1d">血型</td>
+                <td class="t2d"><input type="text"  id="bloodtype" ></td>
+            </tr>
+            <tr class="color1">
+                <td class="t1d">注册时间</td>
+                <td class="t2d">2020-10-01</td>
+            </tr>
+            <tr class="color2">
+                <td class="t1d">简介</td>
+                <td class="t2d" style="color: dimgray;"><input type="text" placeholder="介绍下自己，让更多人认识你哦！" id="intro"></td>
+            </tr>
+        </table>
+        <input type='submit' value="提交" class="btn" style="width: 100px;height: 30px">
+    </form>
     <div style="height: 50px"></div>
 </div>
 </body>
+
+<!--<script>-->
+<!--    window.onload = function(){-->
+<!--        var oForm = document.getElementById('introForm');-->
+<!--        var oName = document.getElementById('name');-->
+<!--        var oPlace = document.getElementById('place');-->
+<!--        var oBirthday = document.getElementById('birthday');-->
+<!--        var oBloodtype = document.getElementById('bloodtype');-->
+<!--        var oIntro = document.getElementById('intro');-->
+<!--        //页面初始化时，若cookie存在，则填充-->
+<!--        if(getCookie('name')){-->
+<!--            oName.value = getCookie('name');-->
+<!--        }-->
+<!--        if(getCookie('place')){-->
+<!--            oPlace.value = getCookie('place');-->
+<!--        }-->
+<!--        if(getCookie('birthday')){-->
+<!--            oBirthday.value = getCookie('birthday');-->
+<!--        }-->
+<!--        if(getCookie('bloodtype')){-->
+<!--            oBloodtype.value = getCookie('bloodtype');-->
+<!--        }-->
+<!--        if(getCookie('intro')){-->
+<!--            oIntro.value = getCookie('intro');-->
+<!--        }-->
+
+<!--        //表单提交事件触发时，保存cookie-->
+<!--        oForm.onsubmit = function(){-->
+<!--            setCookie('name',oName.value,200);-->
+<!--            setCookie('place',oPlace.value,200);-->
+<!--            setCookie('birthday',oBirthday.value,200);-->
+<!--            setCookie('bloodtype',oBloodtype.value,200);-->
+<!--            setCookie('intro',oIntro.value,200); //保存帐号到cookie，有效期200天-->
+<!--            alert("提交成功！");-->
+<!--        };-->
+<!--    };-->
+<!--    //设置cookie-->
+<!--    function setCookie(name,value,day){-->
+<!--        var date = new Date();-->
+<!--        date.setDate(date.getDate() + day);-->
+<!--        document.cookie = name + '=' + value + ';expires='+ date;-->
+<!--    };-->
+<!--    //获取cookie-->
+<!--    function getCookie(name){-->
+<!--        var reg = RegExp(name+'=([^;]+)');-->
+<!--        var arr = document.cookie.match(reg);-->
+<!--        if(arr){-->
+<!--            return arr[1];-->
+<!--        }else{-->
+<!--            return '';-->
+<!--        }-->
+<!--    };-->
+<!--</script>-->
+
 </html>

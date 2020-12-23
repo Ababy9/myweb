@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>contact us</title>
     <link rel="stylesheet" type="text/css" href="css/contact_us.css">
+    <script type="text/javascript" src="js/contact_us.js"></script>
     <style type="text/css">
         ::-webkit-scrollbar{
             display: none;}
@@ -25,27 +26,27 @@
 </div>
 </body>
 
-<script type="text/javascript">
-    function validate_email(field,alerttxt)
-    {
-        with (field)
-        {
-            apos=value.indexOf("@")
-            dotpos=value.lastIndexOf(".")
-            if (apos<1||dotpos-apos<2)
-            {alert(alerttxt);return false}
-            else {return true}
-        }
-    }
+<!--<script type="text/javascript">-->
+<!--    function validate_email(field,alerttxt)-->
+<!--    {-->
+<!--        with (field)-->
+<!--        {-->
+<!--            apos=value.indexOf("@")-->
+<!--            dotpos=value.lastIndexOf(".")-->
+<!--            if (apos<1||dotpos-apos<2)-->
+<!--            {alert(alerttxt);return false}-->
+<!--            else {return true}-->
+<!--        }-->
+<!--    }-->
 
-    function validate_form(thisform)
-    {
-        with (thisform)
-        {
-            if (validate_email(email,"邮箱格式错误！")==false)
-            {email.focus();return false}
-        }
-    }
-</script>
+<!--    function validate_form(thisform)-->
+<!--    {-->
+<!--        with (thisform)-->
+<!--        {-->
+<!--            if (validate_email(email,"邮箱格式错误！")==false)-->
+<!--            {email.focus();return false}-->
+<!--        }-->
+<!--    }-->
+<!--</script>-->
 
 </html>
