@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>add/delete tables</title>
+    <script type="text/javascript">
+        function createTable(){
+            var objDiv = document.getElementById("divid");
+            var vtable=document.createElement("table");
+// vtable.id="idTB";
+            vtable.cellPadding="0", vtable.cellSpacing="0";
+            vtable.border="1";
+            vtable.color="#000000";
+            // vtable.borderColorDark="#000000";
+            // vtable.borderColorLight="#FFFFFF";
+            for(i=0;i<1;i++){
+                var vtr=vtable.insertRow(i);//insertRow插入行
+                for(k=0;k<5;k++){
+                    vtd=vtr.insertCell(k);//insertCell插入列
+                    vtd.innerHTML="<input type=text style='border:0px solid'>"// InnerHtml 是用来获取或设置位于指定的服务器控件的开始标记和结束标记之间的内容。
+                }
+            }
+            objDiv.appendChild(vtable);//appendChild方法可向节点的子节点列表的末尾添加新的子节点。此方法可返回这个新的子节点。
+        }
+//         function mouseDown(){
+//             if(event.button==2) {
+//                 if(event.srcElement.tagName="INPUT"){ //srcElement 对于生成事件的 Window 对象、Document 对象或 Element 对象的引用。
+// //tagName 属性返回被选元素的标签名。
+//                     window.confirm(event.srcElement.value);
+//                 }
+//             }
+//         }
+        // document.onmousedown=mouseDown; //onmousedown 事件会在鼠标按键被按下时发生
+        // document.captureEvents(Event.MOUSEDOWN);
+        /* function RemoveRow()
+        {
+        oTR=idTB.rows(idTB.rows.length-1);
+        oTR.removeNode(true);
+        } */
+        function removeTable(){
+            var objDiv = document.getElementById("divid");
+            var vtables = objDiv.childNodes; //
+            if (vtables.length > 0)
+                objDiv.removeChild(vtables[vtables.length - 1]);
+        }
+    </script>
+</head>
+
+<input type="button" value="创建表格" onclick="javascript:createTable();" />
+<input type="button" value="删除表格" onclick="javascript:removeTable();" />
+<!-- <input type="button" onclick="RemoveRow();" value="减一行"> -->
+<div id="divid"></div>
+<body>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.signin{
+    margin: 100px auto;
+    width: 350px;
+    height: 500px;
+    /*border-color: dimgray;*/
+    background-color: antiquewhite;
+    border-radius:10px;
+}
+.pic{
+    margin-left: 110px;
+    padding-top: 35px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 40px;
+}
+.pic img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+}
+.pp{
+    margin-top: 30px;
+    margin-left: 65px;
+    color: dimgray;
+    font-weight: bolder;
+}
+.check_box{
+    /*padding-top: 2px;*/
+    margin-left: 182px;
+    color: dimgray;
+    font-weight: lighter;
+}
+input{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    height: 25px;
+    /*margin-left: 80px;*/
+    /*margin-bottom: 45px;*/
+}
+input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}
+.btn{
+    margin-left: 65px;
+    margin-top: 30px;
+    background-color: dimgray;
+    color: white;
+    border: 3px;
+    font-weight: bolder;
+}
