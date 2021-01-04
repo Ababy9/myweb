@@ -1,0 +1,37 @@
+.bottom{
+    position: fixed;
+    width: 850px;
+    height: 700px;
+    padding-left: 80px;
+    background-color: antiquewhite;
+    border-radius:10px;
+}
+.highlight{
+    width: 700px;
+    height: 50px;
+    background-color: floralwhite;
+    border-radius: 10px;
+}
+.highlight h3{
+    color: dimgray;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 10px;
+}
+.bottom p{
+    color: dimgray;
+    font-style: italic;
+    text-align: right;
+    margin-top: 20px;
+    margin-right: 100px;
+}
+.bixin{
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    margin-left: 250px;
+}
+.bixin img{
+    width: 200px;
+    height: 220px;
+}
